@@ -1,0 +1,64 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; }
+        .correct { color: green; }
+        .wrong { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Results</h1>
+    <p>Your Score: {{ score }}/{{ total }}</p>
+    <ul>
+        {% for r in results %}
+            <li>
+                <strong>{{ r.question }}</strong><br>
+                Your Answer: 
+                {% if r.is_correct %}
+                    <span class="correct">{{ r.user_answer }}</span>
+                {% else %}
+                    <span class="wrong">{{ r.user_answer }}</span>
+                {% endif %}
+                <br>
+                Correct Answer: {{ r.correct_answer }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; }
+        .correct { color: green; }
+        .wrong { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Results</h1>
+    <p>Your Score: {{ score }}/{{ total }}</p>
+    <ul>
+        {% for r in result %}
+            <li>
+                <strong>{{ r.question }}</strong><br>
+                Your Answer:
+                {% if r.is_correct %}
+                    <span class="correct">{{ r.user_answer }}</span>
+                {% else %}
+                    <span class="wrong">{{ r.user_answer }}</span>
+                {% endif %}
+                <br>
+                Correct Answer: {{ r.correct_answer }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>

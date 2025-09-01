@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.domain-form {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.logo {
+    font-size: 4rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #6366f1, #8b5cf6, #06b6d4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+}
+
+.tagline {
+    font-size: 1.25rem;
+    color: #9ca3af;
+    font-weight: 300;
+}
+
+.domains-section {
+    width: 100%;
+    max-width: 800px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.domains-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.domain-card {
+    background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.domain-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #6366f1, #8b5cf6, #06b6d4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.domain-card:hover::before {
+    opacity: 0.1;
+}
+
+.domain-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+    border-color: #6366f1;
+}
+
+.domain-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.domain-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-text {
+    text-align: center;
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+.bullet {
+    color: #6366f1;
+    margin: 0 10px;
+}
+
+/* Icons using CSS */
+.web-icon::before {
+    content: "🌐";
+}
+
+.programming-icon::before {
+    content: "💻";
+}
+
+.devops-icon::before {
+    content: "⚙️";
+}
+
+.database-icon::before {
+    content: "🗄️";
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 3rem;
+    }
+
+    .domains-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .domain-card {
+        padding: 30px 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    body {
+        padding: 20px 15px;
+    }
+
+    .header {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .domain-title {
+        font-size: 1.3rem;
+    }
+
+    .footer-text {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,100 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: auto;
+      }
+      .question {
+        margin: 20px 0;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+      button {
+        margin: 5px;
+        padding: 8px 16px;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Quiz App</h1>
+
+    {% if questions %}
+    <form method="post">
+      {% csrf_token %} {% for q in questions %}
+      <div class="question">
+        <h3>Q{{ forloop.counter }}: {{ q.question }}</h3>
+        {% for key, value in q.answers.items %} {% if value %}
+        <label>
+          <input type="radio" name="q{{ q.id }}" value="{{ key }}" />
+          {{ value }} </label
+        ><br />
+        {% endif %} {% endfor %}
+      </div>
+      {% endfor %}
+      <button type="submit">Submit</button>
+    </form>
+    {% else %}
+    <p>No questions available.</p>
+    {% endif %}
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: auto;
+      }
+      .question {
+        margin: 20px 0;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+      button {
+        margin: 5px;
+        padding: 8px 16px;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Quiz App</h1>
+
+    {% if questions %}
+    <form method="post">
+      {% csrf_token %}
+      {% for q in questions %}
+      <div class="question">
+        <h3>Q{{ forloop.counter }}: {{ q.question }}</h3>
+
+        {% for key, value in q.answers.items %}
+          {% if value %}
+            <label>
+              <!-- name must be q{{ q.id }} so server-side uses the same key -->
+              <input type="radio" name="q{{ q.id }}" value="{{ key }}" />
+              {{ value }}
+            </label><br />
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endfor %}
+
+      <button type="submit">Submit</button>
+    </form>
+    {% else %}
+    <p>No questions available.</p>
+    {% endif %}
+  </body>
+</html>

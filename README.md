@@ -115,12 +115,3 @@ codeapti/
 * Add timer-based quizzes.
 * Improve UI with animations.
 
----
-
-## 👨‍💻 Author
-
-Developed by **\[Your Name]**
-
----
-
-👉 Do you want me to **generate this README.md file** (with working Markdown image links using your uploaded files), so you can directly use it in your project?

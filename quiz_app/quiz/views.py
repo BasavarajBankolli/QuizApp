@@ -7,7 +7,7 @@
 #     return render(request, "quiz/index.html")
 
 # API_URL = "https://quizapi.io/api/v1/questions"
-# API_KEY = "Hgpab1trKBwi6Bvy8FTMEwVBEc4pIfUSQ4MOTPWG" 
+# API_KEY = "" 
 
 # def quiz_view(request):
 #     if request.method == "POST":
@@ -251,7 +251,7 @@ from django.views.decorators.http import require_POST
 from django.http import HttpResponseBadRequest
 
 API_URL = "https://quizapi.io/api/v1/questions"
-API_KEY = "Hgpab1trKBwi6Bvy8FTMEwVBEc4pIfUSQ4MOTPWG"
+API_KEY = ""
 
 # Session-flag names
 FLAG_CAN_ACCESS = "can_access_domain"
@@ -407,3 +407,4 @@ def results_view(request):
     response["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
     response["Pragma"] = "no-cache"
     return response
+

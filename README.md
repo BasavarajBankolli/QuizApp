@@ -1,27 +1,23 @@
-Perfect 👍 You’ve given me the **3 screenshots** (Home → Quiz → Result). I’ll create a **README.md** file for your Django + HTML + Tailwind CSS project that explains setup, usage, and includes those images for documentation.
-
-Here’s the README:
-
 ---
 
-# CodeApti – Quiz Application 🎯
+# CodeApti – Quiz Application 
 
 A quiz web application built using **Django**, **HTML**, and **Tailwind CSS**.
 Users can select a domain, take quizzes, and view their results with detailed feedback.
 
 ---
 
-## 🚀 Features
+##  Features
 
-* ✅ Choose from multiple domains (Web Development, Programming, DevOps, Databases).
-* ✅ Attempt domain-based quizzes with multiple-choice questions.
-* ✅ Get detailed results with correct and wrong answers highlighted.
-* ✅ Clean UI built with **Tailwind CSS** for responsiveness.
-* ✅ Secure navigation – domain quizzes are only accessible through the home page.
+*  Choose from multiple domains (Web Development, Programming, DevOps, Databases).
+*  Attempt domain-based quizzes with multiple-choice questions.
+*  Get detailed results with correct and wrong answers highlighted.
+*  Clean UI built with **Tailwind CSS** for responsiveness.
+*  Secure navigation – domain quizzes are only accessible through the home page.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Backend:** Django (Python)
 * **Frontend:** HTML, Tailwind CSS
@@ -29,26 +25,28 @@ Users can select a domain, take quizzes, and view their results with detailed fe
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
-### 🏠 Home Page – Domain Selection
+###  Home Page
 
 Users can choose a domain to start their quiz.
-<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/322a7f51-9e7a-492b-aa97-013bfcbdb5aa" />
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/0def2c78-966a-4c27-9893-71cf9a5098ce" />
 
 ---
 
-### 📝 Quiz Page – Attempt Questions
+###  Quiz Page 
 
 Displays domain-based multiple-choice questions.
-<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/e94993f8-7a92-4e2a-8452-b4263f7a9b1b" />
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/5d2a8528-aeeb-4817-b3d3-9b5f7e58c544" />
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/11495f41-c720-4fb4-9bc4-d9a8997aaf1b" />
 
 ---
 
-### 📊 Results Page – Detailed Feedback
+###  Results Page 
 
 Shows score, correct answers, and user responses.
-<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/c7a904c6-e98e-455a-9c08-a1a35191ae1f" />
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/cc92b58d-ec11-498b-826a-e05b0fcdc576" />
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/beb28911-697f-42de-9f3b-9765eb1e7008" />
 
 ---
 
@@ -91,7 +89,7 @@ Shows score, correct answers, and user responses.
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 codeapti/
@@ -108,7 +106,7 @@ codeapti/
 
 ---
 
-## 🎯 Future Improvements
+## Future Improvements
 
 * Add authentication (login/signup).
 * Track user quiz history.

@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeApti - Test Your Coding Skills</title>
+    <link rel="stylesheet" href="{% static 'a/style.css' %}" />
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="logo">CodeApti</h1>
+      <p class="tagline">Test your coding skills across different domains</p>
+    </div>
+
+    <div class="domains">
+      <h2 class="section-title">Choose a Domain</h2>
+
+      <div class="domains-grid">
+        <!-- Each card is a form that POSTS to start_domain -->
+        <form method="post" action="" class="domain-card">
+          {% csrf_token %}
+          <button type="submit" class="domain-btn" aria-label="Start Domain 1">
+            <div class="domain-icon web-icon"></div>
+            <h3 class="domain-title">Web Development</h3>
+          </button>
+        </form>
+
+        <form method="post" action="" class="domain-card">
+          {% csrf_token %}
+          <button type="submit" class="domain-btn" aria-label="Start Domain 2">
+            <div class="domain-icon programming-icon"></div>
+            <h3 class="domain-title">Programming</h3>
+          </button>
+        </form>
+
+        <form method="post" action="" class="domain-card">
+          {% csrf_token %}
+          <button type="submit" class="domain-btn" aria-label="Start Domain 3">
+            <div class="domain-icon devops-icon"></div>
+            <h3 class="domain-title">DevOps</h3>
+          </button>
+        </form>
+
+        <form method="post" action="" class="domain-card">
+          {% csrf_token %}
+          <button type="submit" class="domain-btn" aria-label="Start Domain 4">
+            <div class="domain-icon database-icon"></div>
+            <h3 class="domain-title">Databases</h3>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-text"></div>
+
+    <!-- No JS navigation needed; remove the selectDomain() script -->
+  </body>
+</html>

@@ -1,0 +1,248 @@
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Results</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .results-container {
+      background: #1e1e1e;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 700px;
+      width: 100%;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #2a2a2a;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      transition: transform 0.2s;
+    }
+
+    li:hover {
+      transform: scale(1.02);
+      background: #333;
+    }
+
+    strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #ffffff;
+      font-size: 16px;
+    }
+
+    .correct {
+      color: #4caf50; /* clean green */
+      font-weight: bold;
+    }
+
+    .wrong {
+      color: #f44336; /* clean red */
+      font-weight: bold;
+    }
+
+    .btn-home {
+      display: block;
+      margin: 25px auto 0;
+      text-align: center;
+      padding: 12px 24px;
+      background: #2575fc;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+      width: fit-content;
+    }
+
+    .btn-home:hover {
+      background: #1a5ed7;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="results-container">
+    <h1>Quiz Results</h1>
+    <p>Your Score: {{ score }}/{{ total }}</p>
+    <ul>
+      {% for r in result %}
+        <li>
+          <strong>{{ r.question }}</strong>
+          Your Answer:
+          {% if r.is_correct %}
+            <span class="correct">{{ r.user_answer }}</span>
+          {% else %}
+            <span class="wrong">{{ r.user_answer }}</span>
+          {% endif %}
+          <br>
+          Correct Answer: <span class="correct">{{ r.correct_answer }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+    <a href="{% url 'home' %}" class="btn-home"> Home</a>
+  </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Results</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .results-container {
+      background: #1e1e1e;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 900px;
+      width: 100%;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #2a2a2a;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      transition: transform 0.2s;
+    }
+
+    li:hover {
+      transform: scale(1.02);
+      background: #333;
+    }
+
+    strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #ffffff;
+      font-size: 16px;
+    }
+
+    .correct {
+      color: #4caf50; /* clean green */
+      font-weight: bold;
+    }
+
+    .wrong {
+      color: #f44336; /* clean red */
+      font-weight: bold;
+    }
+
+    .btn-home {
+      display: block;
+      margin: 25px auto 0;
+      text-align: center;
+      padding: 12px 24px;
+      background: #2575fc;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+      width: fit-content;
+    }
+
+    .btn-home:hover {
+      background: #1a5ed7;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="results-container">
+    <h1>Quiz Results</h1>
+    <p>Your Score: {{ score }}/{{ total }}</p>
+    <ul>
+      {% for r in result %}
+        <li>
+          <strong>Q{{ forloop.counter }}: {{ r.question }}</strong>
+          Your Answer:
+          {% if r.is_correct %}
+            <span class="correct">{{ r.user_answer }}</span>
+          {% else %}
+            <span class="wrong">{{ r.user_answer }}</span>
+          {% endif %}
+          <br>
+          Correct Answer: <span class="correct">{{ r.correct_answer }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+    <a href="{% url 'home' %}" class="btn-home"> Home</a>
+  </div>
+</body>
+</html>

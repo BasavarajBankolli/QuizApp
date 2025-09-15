@@ -1,0 +1,120 @@
+<!-- 
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeApti - Test Your Coding Skills</title>
+    <link rel="stylesheet" href="{% static 'quiz/style.css' %}" />
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="logo">CodeApti</h1>
+      <p class="tagline">Test your coding skills across different domains</p>
+    </div>
+
+    <div class="domains">
+      <h2 class="section-title">Choose a Domain</h2>
+
+      <div class="domains-grid">
+        <form method="post" action="{% url 'start_domain' id=1 %}" class="domain-card">
+          {% csrf_token %}
+          <button type="submit" class="domain-card" aria-label="Start Domain 1">
+            <div class="domain-icon web-icon"></div>
+            <h3 class="domain-title">Web Development</h3>
+          </button>
+        </form>
+
+        <form method="post" action="{% url 'start_domain' id=2 %}" class="domain-card">
+          {% csrf_token %}
+          <button type="submit" class="domain-card" aria-label="Start Domain 2">
+            <div class="domain-icon programming-icon"></div>
+            <h3 class="domain-title">Programming</h3>
+          </button>
+        </form>
+
+        <form method="post" action="{% url 'start_domain' id=3 %}" class="domain-card">
+          {% csrf_token %}
+          <button type="submit" class="domain-card" aria-label="Start Domain 3">
+            <div class="domain-icon devops-icon"></div>
+            <h3 class="domain-title">DevOps</h3>
+          </button>
+        </form>
+
+        <form method="post" action="{% url 'start_domain' id=4 %}" class="domain-card">
+          {% csrf_token %}
+          <button type="submit" class="domain-card" aria-label="Start Domain 4">
+            <div class="domain-icon database-icon"></div>
+            <h3 class="domain-title">Databases</h3>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-text"></div>
+
+  </body>
+</html> -->
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeApti - Test Your Skills</title>
+    <link rel="stylesheet" href="{% static 'quiz/style.css' %}" />
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="logo">CodeApti</h1>
+      <p class="tagline">Test your skills across different domains</p>
+    </div>
+
+    <div class="domains">
+      <h2 class="section-title">Select a Domain</h2>
+
+      <div class="domains-grid">
+        <!-- Each card is a form that POSTS to start_domain -->
+        <form method="post" action="{% url 'start_domain' id=1 %}" class="domain-card">
+          {% csrf_token %}
+          <button type="submit" class="domain-btn" aria-label="Start Domain 1">
+            <div class="domain-icon web-icon"></div>
+            <h3 class="domain-title">Web Development</h3>
+          </button>
+        </form>
+
+        <form method="post" action="{% url 'start_domain' id=2 %}" class="domain-card">
+          {% csrf_token %}
+          <button type="submit" class="domain-btn" aria-label="Start Domain 2">
+            <div class="domain-icon programming-icon"></div>
+            <h3 class="domain-title">Programming</h3>
+          </button>
+        </form>
+
+        <form method="post" action="{% url 'start_domain' id=3 %}" class="domain-card">
+          {% csrf_token %}
+          <button type="submit" class="domain-btn" aria-label="Start Domain 3">
+            <div class="domain-icon devops-icon"></div>
+            <h3 class="domain-title">DevOps</h3>
+          </button>
+        </form>
+
+        <form method="post" action="{% url 'start_domain' id=4 %}" class="domain-card">
+          {% csrf_token %}
+          <button type="submit" class="domain-btn" aria-label="Start Domain 4">
+            <div class="domain-icon database-icon"></div>
+            <h3 class="domain-title">Databases</h3>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-text"></div>
+
+  </body>
+</html>
